@@ -79,7 +79,8 @@ GRANT ALL PRIVILEGES ON web_db.* TO 'web_user'@'localhost';
 FLUSH PRIVILEGES;
 
 EXIT;
-#Modify the Website to Use the Database
+
+# Modify the Website to Use the Database
 sudo nano /var/www/html/index.php
 
 "Create a PHP script to connect to the database, display the visitor’s IP address, and fetch the current time."
@@ -111,7 +112,7 @@ $conn->close();
 "Visit the site again"
 http://192.168.56.130/
 
-4. **Pushed the project to GitHub**
+4.**Pushed the project to GitHub**
 
 cd /var/www/html/
 
@@ -200,7 +201,7 @@ Choosing the right IP type and hosting service impacts reliability, security, an
 ______________________________________________________________________________________________
 
 
-#MAC Address: What it is, its purpose, and how it differs from an IP address. 
+# MAC Address: What it is, its purpose, and how it differs from an IP address. 
 
 MAC Address (Media Access Control)
 Definition: A unique, permanent physical address assigned to the Network Interface Card (NIC) of a device.
@@ -251,7 +252,7 @@ Device A's router sends the data to Device B's router using IP addresses.
 Device B's router identifies Device B using its MAC address and delivers the data.
 _____________________________________________________________________________________________
 
-#Switches, Routers, and Routing Protocols: Basic definitions and their roles in a network. 
+# Switches, Routers, and Routing Protocols: Basic definitions and their roles in a network. 
 
 Switches
 
@@ -312,7 +313,8 @@ Routing protocols are sets of rules used by routers to dynamically determine the
 _______________________________________________________________________________________
 
 
-#Remote Connection to Cloud Instance: Steps you would take to connect to your cloud-based 
+# Remote Connection to Cloud Instance: Steps you would take to connect to your cloud-based 
+
 Linux instance from a remote machine (e.g., using SSH).
 
 
