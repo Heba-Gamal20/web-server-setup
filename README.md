@@ -1,3 +1,8 @@
+
+
+# to access website <http://192.168.56.130/> 
+
+
 # Web Server Setup with LAMP Stack
 1. **Installed LAMP Stack (Linux, Apache, MySQL, PHP)**
 # Update the system
