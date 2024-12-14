@@ -140,9 +140,12 @@ git remote add origin https://github.com/Heba-Gamal20/web-server-setup.git
 git push -u origin main
 
 /////////////////////////////////////////////////////////////////////////////////////////////
-#Networking Basics :
+
+
+# Networking Basics :
 ....
-#IP Address:
+
+# IP Address:
 
 What is an IP Address?
 
