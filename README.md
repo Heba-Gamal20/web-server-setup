@@ -6,12 +6,18 @@ sudo dnf update -y
 # Install Apache
 sudo dnf install httpd -y,
 
+"Start and enable apache:"
+
 sudo systemctl start httpd,
 
 sudo systemctl enable httpd,
 
 sudo systemctl status httpd,
+
 #Make the Website Publicly Accessible
+
+"Allow HTTP (port 80) and optionally HTTPS (port 443):"
+
 sudo firewall-cmd --permanent --add-service=http ,
 
 sudo firewall-cmd --permanent --add-service=https ,
@@ -21,9 +27,13 @@ sudo firewall-cmd --reload
 # Install MariaDB (MySQL equivalent)
 sudo dnf install mariadb-server mariadb -y
 
+"Start and enable mariadb:"
+
 sudo systemctl start mariadb
 
 sudo systemctl enable mariadb
+
+"Secure the installation:"
 
 sudo mysql_secure_installation
 # Install PHP and its modules
@@ -43,7 +53,12 @@ http://192.168.56.130/
 
 3. **Created a MySQL database and user**
 
+"Log in to MySQL and create a database and user:"
+
+
 sudo mysql -u root -p
+
+"Inside the MySQL prompt:"
 
 CREATE DATABASE web_db;
 
@@ -57,6 +72,8 @@ FLUSH PRIVILEGES;
 EXIT;
 #Modify the Website to Use the Database
 sudo nano /var/www/html/index.php
+
+"Create a PHP script to connect to the database, display the visitor’s IP address, and fetch the current time."
 
 <?php
 $servername = "localhost";
@@ -82,6 +99,7 @@ echo "Current time: " . $current_time;
 
 $conn->close();
 ?>
+"Visit the site again"
 http://192.168.56.130/
 4. **Pushed the project to GitHub**
 cd /var/www/html/
