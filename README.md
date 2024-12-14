@@ -48,7 +48,8 @@ sudo systemctl restart httpd
 
 *Verify that Apache is serving files from /var/www/html/:
 
-echo '<html><body><h1>Apache is Working!</h1></body></html>' | sudo tee /var/www/html/index.html
+*echo '<html><body><h1>Apache is Working!</h1></body></html>' | sudo tee /var/www/html/index.html*
+
 http://192.168.56.130/
 
 #Create a Simple Website
