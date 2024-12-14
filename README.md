@@ -3,7 +3,9 @@
 # Update the system
 sudo dnf update -y
 
+
 # Install Apache
+
 sudo dnf install httpd -y,
 
 "Start and enable apache:"
@@ -36,15 +38,21 @@ sudo systemctl enable mariadb
 "Secure the installation:"
 
 sudo mysql_secure_installation
+
 # Install PHP and its modules
 sudo dnf install php php-mysqlnd -y
 
 sudo systemctl restart httpd
+
 2. **Configured Apache to serve a PHP-based website**
+
 *Verify that Apache is serving files from /var/www/html/:
+
 echo '<html><body><h1>Apache is Working!</h1></body></html>' | sudo tee /var/www/html/index.html
 http://192.168.56.130/
+
 #Create a Simple Website
+
 echo '<?php echo "Hello World!"; ?>' | sudo tee /var/www/html/index.php
 
 sudo rm /var/www/html/index.html
@@ -101,18 +109,28 @@ $conn->close();
 ?>
 "Visit the site again"
 http://192.168.56.130/
+
 4. **Pushed the project to GitHub**
+
 cd /var/www/html/
+
 
 git init
 
-git add .
+touch .gitignore
+
+nano .gitignore
+
 
 touch README.md
 
+
 nano README.md
 
-git commit -m "Initial LAMP setup"
+git add .gitignore README.md
+
+git commit -m "Add .gitignore and README.md with project description"
+
 
 git branch -M main
 
