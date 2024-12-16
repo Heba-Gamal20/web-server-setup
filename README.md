@@ -23,7 +23,7 @@ sudo systemctl status httpd,
 
 #Make the Website Publicly Accessible
 
-"Allow HTTP (port 80) and optionally HTTPS (port 443):"
+"Allow HTTP (port 80) and  HTTPS (port 443):"
 
 sudo firewall-cmd --permanent --add-service=http ,
 
